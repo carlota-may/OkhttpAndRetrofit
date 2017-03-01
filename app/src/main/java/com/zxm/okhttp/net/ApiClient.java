@@ -1,10 +1,12 @@
-package com.zxm.okhttp;
+package com.zxm.okhttp.net;
 
 import android.content.Context;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.zxm.okhttp.BuildConfig;
+import com.zxm.okhttp.R;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

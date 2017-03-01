@@ -1,7 +1,9 @@
-package com.zxm.okhttp;
+package com.zxm.okhttp.net;
 
 import android.content.Context;
 import android.support.annotation.StringRes;
+
+import com.zxm.okhttp.R;
 
 import lombok.Getter;
 

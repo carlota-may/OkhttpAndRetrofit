@@ -1,4 +1,4 @@
-package com.zxm.okhttp;
+package com.zxm.okhttp.net;
 
 import lombok.Data;
 

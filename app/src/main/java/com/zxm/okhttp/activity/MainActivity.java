@@ -7,9 +7,9 @@ import android.widget.EditText;
 
 import com.zxm.okhttp.R;
 import com.zxm.okhttp.entiy.BaseUserInfo;
-import com.zxm.okhttp.net.ApiClient;
-import com.zxm.okhttp.net.ApiErrorModel;
-import com.zxm.okhttp.net.RequestCallback;
+import com.zxm.okhttp.network.ApiClient;
+import com.zxm.okhttp.network.ApiErrorModel;
+import com.zxm.okhttp.network.RequestCallback;
 
 import butterknife.BindView;
 

@@ -1,4 +1,4 @@
-package com.zxm.okhttp.net;
+package com.zxm.okhttp.network;
 
 import android.content.Context;
 
@@ -8,14 +8,12 @@ import com.google.gson.GsonBuilder;
 import com.zxm.okhttp.BuildConfig;
 import com.zxm.okhttp.R;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import lombok.Getter;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -28,10 +26,12 @@ public final class ApiClient {
 
     @Getter
     private Context context;
+    
     @Getter
     private OkhttpService okhttpService;
 
     private ApiClient() {
+        //prevent instance
     }
 
     public static ApiClient getInstance() {
@@ -44,14 +44,11 @@ public final class ApiClient {
     public void initialize(final Context c) {
         context = c;
 //        Use your header
-        Interceptor interceptor = new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Request.Builder requestBuilder = chain.request().newBuilder();
-                requestBuilder.addHeader("TIME", "time");
-                requestBuilder.addHeader("TOKEN", "token");
-                return chain.proceed(requestBuilder.build());
-            }
+        Interceptor interceptor = chain -> {
+            Request.Builder requestBuilder = chain.request().newBuilder();
+            requestBuilder.addHeader("TIME", "time");
+            requestBuilder.addHeader("TOKEN", "token");
+            return chain.proceed(requestBuilder.build());
         };
 
         OkHttpClient okHttpClient = new OkHttpClient().newBuilder()

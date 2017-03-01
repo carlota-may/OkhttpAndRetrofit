@@ -1,4 +1,4 @@
-package com.zxm.okhttp.net;
+package com.zxm.okhttp.network;
 
 import android.content.Context;
 import android.support.annotation.StringRes;

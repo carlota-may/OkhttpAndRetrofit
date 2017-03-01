@@ -1,4 +1,4 @@
-package com.zxm.okhttp.net;
+package com.zxm.okhttp.network;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Okhttp</string>
+    <string name="base_url">http://ec2-52-199-170-95.ap-northeast-1.compute.amazonaws.com/index.php/</string>
+    <string name="service_error">service_error</string>
+    <string name="not_found">not_found</string>
+    <string name="network_wrong">network_wrong</string>
+    <string name="parse_error">parse_error</string>
+    <string name="timeout">timeout</string>
+</resources>

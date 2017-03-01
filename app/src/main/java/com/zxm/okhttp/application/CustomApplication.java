@@ -2,7 +2,7 @@ package com.zxm.okhttp.application;
 
 import android.app.Application;
 
-import com.zxm.okhttp.net.ApiClient;
+import com.zxm.okhttp.network.ApiClient;
 
 public class CustomApplication extends Application {
 
